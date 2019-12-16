@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Проктология</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body>
@@ -42,9 +43,9 @@
             <div class="container">
                 <div class="top-baner-wr">
                     <div class="top-banner__buttons">
-                        <button>Заказать звонок</button>
-                        <button>Написать письмо</button>
-                        <button>Позвонить</button>
+                        <a href="#my_modal" rel="modal:open">Заказать звонок</a>
+                        <a href="#my_modal" rel="modal:open">Написать письмо</a>
+                        <a href="#my_modal" rel="modal:open">Позвонить</a>
                     </div>
                     <div class="banner-wr">
                         <div class="top-banner__questions">
@@ -64,14 +65,14 @@
         <div class="container">
             <div class="content">
                 <div class="mobile_buttons">
-                        <button>Заказать звонок</button>
-                        <button>Написать письмо</button>
-                        <button>Позвонить</button>
-                    </div>
+                    <a href="#my_modal" rel="modal:open">Заказать звонок</a>
+                    <a href="#my_modal" rel="modal:open">Написать письмо</a>
+                    <a href="#my_modal" rel="modal:open">Позвонить</a>
+                </div>
                 <div class="top-banner__questions mobile">
-                            <h3>Есть вопросы? Звоните!</h3>
-                            <a href="tel:89873528244">+7 987 352 82 44</a>
-                        </div>
+                    <h3>Есть вопросы? Звоните!</h3>
+                    <a class="phone" href="tel:89873528244">+7 987 352 82 44</a>
+                </div>
                 <p>«У кого-кого, а у меня никогда не будет геморроя» - так размышляют многие. Но смею вас в
                     этом разуверить — будет! Все-таки будет! Да, жизнь не справедлива и частенько
                     подбрасывает нам «свинью». И эта наша человечья природа, ни с того ни с сего, разделила
@@ -130,9 +131,8 @@
                 <p>Для верной постановки диагноза, как правило, достаточно внешнего осмотра, аноскопии и
                     ректороманоскопии, все манипуляции проводятся не более 3-х минут, и мой пациент не
                     чувствует никаких болевых ощущений. </p><br><br>
-                
-                    <h2>Лечение геморроя:</h2>
-                  <p>  Консервативная терапия геморроя: средства, укрепляющие венозную стенку (флеботоники),
+                <h2>Лечение геморроя:</h2>
+                <p> Консервативная терапия геморроя: средства, укрепляющие венозную стенку (флеботоники),
                     местные антикоагулянты, НПВС, гемостатики, ректальные свечи и мази. Очень важно —
                     нормализовать стул (увеличить потребление овощей и фруктов в рационе), отказаться от
                     кофе, курения и алкоголя, повысить физическую активность.
@@ -196,8 +196,20 @@
             </div>
         </div>
     </footer>
+    <div id="my_modal" class="modal">
+        <form action="#">
+            <label for="name">Ваше имя</label>
+            <input type="text" name="name" placeholder="Василий">
+            <label for="phone">Ваш телефон</label>
+            <input type="phone" name="phone" placeholder="+7">
+        </form>
+        <div class="top-banner__buttons">
+            <a href="#">Отправить</a>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 </body>
 
 </html>
