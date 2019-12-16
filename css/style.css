@@ -1,0 +1,830 @@
+@font-face {
+    font-family: 'FuturaFuturisC';
+    src: url('../fonts/FuturaFuturisC.eot');
+    src: url('../fonts/FuturaFuturisC.eot') format('embedded-opentype'),
+        url('../fonts/FuturaFuturisC.svg#FuturaFuturisC') format('svg'),
+        url('../fonts/FuturaFuturisC.woff2') format('woff2'),
+        url('../fonts/FuturaFuturisC.woff') format('woff'),
+        url('../fonts/FuturaFuturisC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FuturaFuturisBlackC';
+    src: url('../fonts/FuturaFuturisBlackC.eot');
+    src: url('../fonts/FuturaFuturisBlackC.eot') format('embedded-opentype'),
+        url('../fonts/FuturaFuturisBlackC.woff2') format('woff2'),
+        url('../fonts/FuturaFuturisBlackC.woff') format('woff'),
+        url('../fonts/FuturaFuturisBlackC.ttf') format('truetype'),
+        url('../fonts/FuturaFuturisBlackC.svg#FuturaFuturisBlackC') format('svg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+    font-family: 'FuturaFuturisC';
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#nav-icon1 {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 80%;
+    background: #4F4F4E;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 9px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 18px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.burger {
+    display: none;
+}
+
+.mobile {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-menu {
+    margin: 30px 0;
+}
+
+.top-banner__questions-mobile {
+    display: none;
+    margin-top: 20px;
+}
+
+.top-banner__questions-mobile h3 {
+    color: #2A4381;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.top-banner__questions-mobile a {
+    font-size: 30px;
+    color: #5B5B5B;
+    display: block;
+    text-align: center;
+}
+
+.top-banner__questions-mobile button {
+    height: 36px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 49%;
+    background: #9299C3;
+    color: #5B5B5B;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.top-menu ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.top-mobile-menu {
+    display: none;
+}
+
+.menu-open {
+    display: block;
+    transition: all .3s;
+}
+
+.top-mobile-menu ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.top-mobile-menu li {
+    margin-bottom: 10px;
+}
+
+.top-menu__mobile-item a {
+    font-size: 24px;
+    color: #4F4F4E;
+}
+
+.top-menu__item a {
+    font-size: 30px;
+    color: #4F4F4E;
+}
+
+.main-content {
+    margin-top: 20px;
+}
+
+.main-doctor {
+    background: url(../images/30.png) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 0 0;
+    height: 100%;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+.top-banner {
+    background: url(../images/3.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.top-baner-wr {
+    width: 50%;
+    padding-top: 40px;
+    margin-top: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.banner-wr {
+    display: block;
+    text-align: right;
+    margin-top: 150px;
+}
+.mobile_buttons {
+    display: none;
+    text-align: center;
+}
+.mobile_buttons button {
+    height: 36px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 200px;
+    background: #9299C3;
+    color: #5B5B5B;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.top-banner__questions h3 {
+    color: #2A4381;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.top-banner__questions a {
+    font-size: 36px;
+    color: #5B5B5B;
+    display: block;
+}
+
+.top-banner__buttons button {
+    height: 36px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 200px;
+    background: #9299C3;
+    color: #5B5B5B;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.top-banner__buttons button:last-child {
+    margin-right: 0;
+}
+
+.top-banner__questions button {
+    height: 36px;
+    display: block;
+    margin-top: 10px;
+    width: 200px;
+    background: #9299C3;
+    color: #5B5B5B;
+    font-size: 22px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.top-banner__text {
+    color: #2A4381;
+    font-size: 86px;
+    margin-top: 150px;
+    text-transform: uppercase;
+}
+
+.blue-line {
+    height: 10px;
+    background: #2A4381;
+}
+
+.main-content .content p {
+    font-size: 20px;
+}
+
+.main-content .content h2 {
+    font-size: 30px;
+}
+
+.main-content .content ul li {
+    list-style: disc;
+    font-size: 20px;
+}
+
+.uslugi {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10vw;
+    padding: 15px 0;
+}
+
+.uslugi p {
+    text-align: center;
+    margin: 15px 0;
+    text-transform: uppercase;
+    color: #5B5B5B;
+    font-size: 20px;
+}
+
+.doctor-photo {
+    margin-top: 30px;
+}
+
+.doctor {
+    background: url(../images/2.jpg) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    height: 900px;
+    background-position: center center;
+}
+
+footer {
+    background: url(../images/3.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 650px;
+    width: 100%;
+}
+
+.forma-wrap {
+    height: 650px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.forma {
+    max-height: 500px;
+    width: 65%;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+.forma-title p {
+    font-size: 44px;
+    color: #314185;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.input {
+    display: block;
+}
+
+input {
+    height: 70px;
+    width: 40%;
+    border: 1px solid #314185;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 5px;
+    margin: 10px;
+}
+
+input::placeholder {
+    color: #314185;
+    font-family: 'FuturaFuturisC';
+    font-size: 16px;
+}
+
+#zapis {
+    margin-top: 10px;
+    height: 70px;
+    width: 40%;
+    outline: none;
+    border-radius: 10px;
+    background: #314185;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+    .top-banner__title h1 {
+        font-size: 60px;
+    }
+
+    .top-banner {
+        height: 700px;
+        background-size: cover;
+    }
+
+    .top-baner-wr {
+        width: 45%;
+    }
+
+    .top-banner__text {
+        font-size: 82px;
+    }
+
+    .main-doctor {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 969px) {
+    .top-menu ul {
+        justify-content: flex-end;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .main-doctor {
+        right: -5%;
+    }
+
+    .top-banner__questions {
+        margin-top: 100px;
+    }
+
+    .banner-wr {
+        width: 90%;
+    }
+
+    .top-banner__text {
+        margin-top: 100px;
+    }
+
+    .top-menu .item {
+        display: none;
+    }
+
+    .forma {
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width: 769px) {
+    .otzivi-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5vw;
+    }
+
+    .top-banner__questions {
+        margin-top: 60px;
+    }
+
+    .top-banner__questions a {
+        font-size: 24px;
+    }
+
+    .top-banner__text {
+        font-size: 60px;
+        margin-top: 60px;
+    }
+
+    .tablichki-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5vw;
+    }
+
+    .tablichki-item p {
+        font-size: 20px;
+    }
+
+    .uslugi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5vw;
+    }
+
+    .doctor {
+        height: 530px;
+    }
+
+    .forma {
+        width: 100%;
+
+    }
+
+    .forma-title p {
+        font-size: 34px;
+
+    }
+
+    .uslugi p {
+        font-size: 18px;
+    }
+
+    .top-banner-wr-2 {
+        text-align: right;
+    }
+
+    .banner-wr {
+        position: inherit;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    input {
+        height: 40px;
+        width: 95%;
+    }
+
+    #zapis {
+        height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        width: 25%;
+    }
+
+    .forma-wrap {
+        height: 590px;
+    }
+
+    footer {
+        height: 590px;
+    }
+
+    .otzivi__title {
+        font-size: 30px;
+    }
+
+    .top-banner__inst {
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-banner__buttons {
+        display: none;
+    }
+
+    .mobile_buttons {
+        display: block;
+    }
+
+    .otzivi-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5vw;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
+    .top-banner__questions {
+        display: none;
+    }
+
+    .tablichki-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2vw;
+    }
+
+    .top-banner__text {
+        display: none;
+    }
+
+    .main-doctor {
+        right: 0;
+        width: 110%;
+    }
+
+    .tablichki-item p {
+        font-size: 14px;
+    }
+
+    .top-banner__descr p {
+        font-size: 20px;
+        text-align: right;
+    }
+
+    .top-banner__descr span {
+        text-align: right;
+    }
+
+    .doctor {
+        height: 370px;
+    }
+
+    .top-banner__inst a {
+        font-size: 24px;
+    }
+
+    .uslugi {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5vw;
+    }
+
+    footer {
+        height: 535px;
+    }
+
+    .forma-wrap {
+        height: 535px;
+    }
+
+    .forma-title p {
+        font-size: 24px;
+    }
+
+    .forma {
+        width: 100%;
+    }
+
+    input {
+        height: 40px;
+        width: 95%;
+    }
+
+    .uslugi p {
+        font-size: 16px;
+    }
+
+    #zapis {
+        height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        width: 60%;
+    }
+
+    .top-banner__questions-mobile {
+        display: block;
+    }
+
+    .top-baner-wr {
+        padding-top: 0;
+    }
+
+    .top-banner__questions {
+        text-align: center;
+    }
+
+    .top-banner__title h1 {
+        font-size: 24px;
+        text-align: right;
+        /*font-weight: 700;*/
+        line-height: inherit;
+    }
+
+
+    .top-banner__questions a {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .top-banner__questions button {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .banner-wr {
+        display: block;
+        width: 50%;
+        text-align: right;
+    }
+
+    .top-banner__inst {
+        margin-top: 285px;
+        text-align: left;
+    }
+
+    .top-banner__text {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .otzivi__title {
+        font-size: 24px;
+    }
+
+
+    .tablichki-item img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .main-doctor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 660px) {
+    .main-doctor {
+        right: 0;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .top-banner__questions {
+        display: none;
+    }
+
+    .top-banner__text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 659px) and (min-width: 481px) {
+    .main-doctor {
+        right: -10%;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .top-banner__questions {
+        display: none;
+    }
+
+    .top-banner__title h1 {
+        font-size: 33px;
+        line-height: inherit;
+    }
+
+    .top-banner__text {
+        display: none;
+    }
+
+    .top-baner-wr {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 371px) {
+    .main-doctor {
+        right: 0;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .main-doctor {
+        right: 0;
+        width: 115%;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .top-baner-wr {
+        padding-top: 0;
+    }
+
+}
