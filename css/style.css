@@ -531,7 +531,10 @@ input::placeholder {
     .top-banner__questions {
         margin-top: 60px;
     }
-    .mobile {
+    .top-banner__questions {
+        display: none;
+    }
+    .top-banner__questions.mobile {
         display: block;
     }
     .top-banner__questions a {
@@ -779,14 +782,6 @@ input::placeholder {
 @media screen and (max-width: 769px) and (min-width: 660px) {
     .main-doctor {
         right: 0;
-    }
-
-    .mobile {
-        display: block;
-    }
-
-    .top-banner__questions {
-        display: none;
     }
 
     .top-banner__text {
