@@ -528,10 +528,6 @@ input::placeholder {
         grid-template-columns: 1fr 1fr;
         grid-gap: 5vw;
     }
-    .mobile_buttons {
-        display: block;
-    }
-
     .top-banner__questions {
         margin-top: 60px;
     }
