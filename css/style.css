@@ -264,7 +264,7 @@ li {
     display: none;
     text-align: center;
 }
-.mobile_buttons button {
+.mobile_buttons a {
     height: 36px;
     display: inline-block;
     margin-top: 10px;
@@ -273,6 +273,8 @@ li {
     color: #5B5B5B;
     font-size: 22px;
     border: none;
+    text-align: center;
+    line-height: 36px;
     border-radius: 20px;
     outline: none;
     cursor: pointer;
@@ -290,7 +292,7 @@ li {
     display: block;
 }
 
-.top-banner__buttons button {
+.top-banner__buttons a {
     height: 36px;
     display: inline-block;
     margin-top: 10px;
@@ -299,17 +301,31 @@ li {
     color: #5B5B5B;
     font-size: 22px;
     border: none;
+    line-height: 36px;
+    text-align: center;
     border-radius: 20px;
     outline: none;
     cursor: pointer;
     margin-right: 10px;
 }
-
-.top-banner__buttons button:last-child {
+#my_modal .top-banner__buttons{
+    display: block;
+    text-align: center;
+}
+#my_modal label {
+    display: block;
+}
+#my_modal input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    height: 40px; 
+}
+.top-banner__buttons a:last-child {
     margin-right: 0;
 }
 
-.top-banner__questions button {
+.phone a {
     height: 36px;
     display: block;
     margin-top: 10px;
@@ -346,6 +362,7 @@ li {
 .main-content .content ul li {
     list-style: disc;
     font-size: 20px;
+    margin-left: 20px;
 }
 
 .uslugi {
