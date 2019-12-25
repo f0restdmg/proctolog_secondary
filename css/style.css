@@ -464,6 +464,50 @@ input::placeholder {
     cursor: pointer;
 }
 
+.gemor-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+.gemor-wrap > div {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+
+}
+.gemor-item1 {
+    background: url('../images/gemor1.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gemor-item2 {
+    background: url('../images/gemor2.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gemor-item3 {
+    background: url('../images/gemor3.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gemor-item4 {
+    background: url('../images/gemor4.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gemor-item5 {
+    background: url('../images/gemor5.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.gemor-item6 {
+    background: url('../images/gemor6.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 @media (max-width: 1120px) {
     .top-banner__title h1 {
         font-size: 60px;
@@ -628,6 +672,13 @@ input::placeholder {
         display: block;
     }
 
+    .gemor-wrap {
+        justify-content: center;
+    }
+    .gemor-wrap > div {
+        width: 200px;
+        height: 200px;
+    }
     .otzivi-items {
         display: grid;
         grid-template-columns: 1fr;
